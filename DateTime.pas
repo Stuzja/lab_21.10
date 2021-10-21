@@ -19,6 +19,17 @@ begin
   else result := 365;
 end;
 
+function DaysInYear(y1, y2: integer): integer;
+begin
+  if y1 > y2 then
+    (y1, y2) := (y2, y1);
+  Result := 0;
+  for var i := y1 to y2 do
+    if IsLeapYear(i) then
+      Result += 366
+    else result += 365;
+end;
+
 begin
   
 end.

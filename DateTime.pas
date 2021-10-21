@@ -30,6 +30,7 @@ begin
     else result += 365;
 end;
 
+function SecondsinHours(h:integer):=h*60*60;
 begin
   
 end.
